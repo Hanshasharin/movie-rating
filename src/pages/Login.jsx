@@ -13,7 +13,7 @@ const [data,setData] = useState({
 
      const loginHandler=(event)=>{
         event.preventDefault()
-        axios.post('http://localhost:3000/user/login',{
+        axios.post('https://movie-rating-backend-1-e9xx.onrender.com/user/login',{
             email:data.email,
             password:data.password
         }).then (res=>{

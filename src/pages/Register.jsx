@@ -13,7 +13,7 @@ const navigate = useNavigate()
     })
     const registerHandler=(event)=>{
         event.preventDefault()
-        axios.post('http://localhost:3000/user/register',{
+        axios.post('https://movie-rating-backend-1-e9xx.onrender.com/user/register',{
             email:data.email,
             password:data.password
         }).then(res=>{

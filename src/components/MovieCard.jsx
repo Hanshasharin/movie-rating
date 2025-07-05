@@ -28,13 +28,13 @@ const header =  {
 
 }
 
-  // axios.post('http://localhost:3000/rating').then(res=>{console.log(res.data);
+  // axios.post('https://movie-rating-backend-1-e9xx.onrender.com/rating').then(res=>{console.log(res.data);
   // })
 
-    axios.put('http://localhost:3000/rating', { rating : rating , id:props.movie._id},{headers:header}) // ✅ send rating in body
+    axios.put('https://movie-rating-backend-1-e9xx.onrender.com/rating', { rating : rating , id:props.movie._id},{headers:header}) // ✅ send rating in body
     .then(res => {
       console.log("Server response:", res.data);
-          axios('http://localhost:3000/movies')
+          axios('https://movie-rating-backend-1-e9xx.onrender.com/movies')
       handleClose()
     })
     .catch(err => {
@@ -50,7 +50,7 @@ setRating(event.target.value)
   
   const deleteMovie = () => {
   alert("delete");
-  axios.delete("http://localhost:3000/delete?id=" + props.movie._id)
+  axios.delete("https://movie-rating-backend-1-e9xx.onrender.com/delete?id=" + props.movie._id)
     .then(res => {
       console.log(res.data);
     })

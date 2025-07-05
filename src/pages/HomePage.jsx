@@ -51,7 +51,7 @@ useEffect(() => {
 
 
 // axios('https://fakestoreapi.com/products')
-axios('http://localhost:3000/movies')
+axios('https://movie-rating-backend-1-e9xx.onrender.com/movies')
 
 
 .then(res=> {
@@ -95,7 +95,7 @@ const addMovie = (event)=>{
   event.preventDefault()
   // console.log("submitted");
   // console.log(newmovie);
-  axios.post("http://localhost:3000/creat",newmovie)
+  axios.post("https://movie-rating-backend-1-e9xx.onrender.com/creat",newmovie)
   .then(res=>{console.log(res.data);
     getMovies()
   })
